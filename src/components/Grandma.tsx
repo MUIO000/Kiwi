@@ -1,7 +1,5 @@
 import React from 'react';
 import './Grandma.css';
-// 导入图片
-import grandmaImage from '../assets/images/5.jpg';
 
 const Grandma: React.FC = () => {
   return (

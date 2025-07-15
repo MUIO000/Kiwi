@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaMapMarkerAlt, FaMountain, FaWater, FaLeaf, FaHistory, FaBook, FaIndustry, FaGlobeAfrica } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaWater, FaLeaf, FaHistory, FaIndustry, FaGlobeAfrica } from 'react-icons/fa';
 
 const Origin: React.FC = () => {
   const { ref, inView } = useInView({

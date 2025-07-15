@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaPhone, FaWeixin, FaTruck, FaGift } from 'react-icons/fa';
-import { IconType } from 'react-icons';
 
 const Pricing: React.FC = () => {
   const { ref, inView } = useInView({
