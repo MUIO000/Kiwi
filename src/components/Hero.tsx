@@ -8,10 +8,12 @@ const Hero: React.FC = () => {
       <div className="hero-background">
         <motion.div 
           className="hero-image"
-          initial={{ scale: 1.2, opacity: 0 }}
+          initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-        />
+        >
+          <img src="/images/10.jpg" alt="猕猴桃背景" />
+        </motion.div>
       </div>
       
       <div className="hero-content">
