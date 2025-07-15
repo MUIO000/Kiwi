@@ -1,0 +1,409 @@
+.grandma-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f7f3e9 0%, #e8f5e8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.grandma-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 180, 83, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 183, 77, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.grandma-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.grandma-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.grandma-text {
+  padding-right: 20px;
+}
+
+.grandma-portrait {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.grandma-portrait::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #78b453, #ffb74d);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.grandma-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grandma-portrait:hover img {
+  transform: scale(1.05);
+}
+
+.grandma-title {
+  font-size: 2.5rem;
+  color: #2d5016;
+  margin-bottom: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  position: relative;
+}
+
+.grandma-story {
+  space-y: 20px;
+}
+
+.story-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5d23;
+  margin-bottom: 20px;
+  text-align: justify;
+  position: relative;
+  padding-left: 0;
+}
+
+.story-paragraph:first-child::before {
+  content: '"';
+  font-size: 4rem;
+  color: #78b453;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  font-family: serif;
+  opacity: 0.3;
+}
+
+.grandma-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding: 20px 0;
+}
+
+.image-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.image-group.left-aligned {
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 70%;
+  margin-top: -10px;
+}
+
+.image-group.right-aligned {
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 65%;
+  margin-top: -10px;
+}
+
+
+
+.image-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d5016;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.image-placeholder {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(120, 180, 83, 0.3) 0%, 
+    transparent 30%, 
+    transparent 70%, 
+    rgba(255, 183, 77, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: 13px;
+}
+
+.image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #78b453, 
+    #ffb74d, 
+    #78b453, 
+    #ffb74d);
+  background-size: 300% 300%;
+  border-radius: 17px;
+  opacity: 0;
+  animation: gradientShift 3s ease infinite;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.image-placeholder:hover::before {
+  opacity: 1;
+}
+
+.image-placeholder:hover::after {
+  opacity: 0.6;
+}
+
+.image-placeholder:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.main-image {
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+  max-height: 300px;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.placeholder-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #78b453;
+  margin-bottom: 8px;
+}
+
+.placeholder-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.heritage-quote {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #78b453;
+}
+
+.heritage-quote blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #2d5016;
+  margin: 0 0 15px 0;
+  line-height: 1.6;
+  position: relative;
+}
+
+.heritage-quote blockquote::before,
+.heritage-quote blockquote::after {
+  content: '"';
+  font-size: 2rem;
+  color: #78b453;
+  font-family: serif;
+}
+
+.heritage-quote cite {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .grandma-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .grandma-text {
+    padding-right: 0;
+  }
+  
+  .grandma-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grandma-section {
+    padding: 60px 15px;
+  }
+  
+  .grandma-content {
+    gap: 30px;
+  }
+  
+  .grandma-portrait {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 25px;
+  }
+  
+  .grandma-title {
+    font-size: 1.8rem;
+  }
+  
+  .story-paragraph {
+    font-size: 1rem;
+  }
+  
+  .grandma-images {
+    gap: 30px;
+  }
+  
+  .image-group.left-aligned,
+  .image-group.right-aligned {
+    max-width: 85%;
+    margin-top: 0;
+  }
+  
+  .image-group.right-aligned {
+    margin-top: -10px;
+  }
+  
+  .main-image {
+    height: 30vh;
+    min-height: 180px;
+    max-height: 250px;
+  }
+  
+  .heritage-quote {
+    padding: 30px 20px;
+  }
+  
+  .heritage-quote blockquote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grandma-section {
+    padding: 40px 10px;
+  }
+  
+  .grandma-portrait {
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .grandma-title {
+    font-size: 1.6rem;
+  }
+  
+  .story-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .grandma-images {
+    gap: 25px;
+  }
+  
+  .image-group.left-aligned,
+  .image-group.right-aligned {
+    max-width: 95%;
+    margin-top: 0;
+  }
+  
+  .image-group.right-aligned {
+    margin-top: -5px;
+  }
+  
+  .image-label {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  
+  .main-image {
+    height: 28vh;
+    min-height: 160px;
+    max-height: 220px;
+  }
+  
+  .placeholder-text {
+    font-size: 0.9rem;
+  }
+} 
