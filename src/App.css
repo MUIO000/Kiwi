@@ -156,7 +156,7 @@ body {
   font-family: "ZCOOL KuaiLe", cursive;
   font-size: 40px;
   letter-spacing: 0.1em;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 800;
 }
@@ -679,6 +679,75 @@ body {
   }
 }
 
+/* 下单流程样式 */
+.order-process {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.order-process h3 {
+  font-size: 1.8rem;
+  color: #15803d;
+  margin-bottom: 2rem;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #84cc16;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.step-content h4 {
+  font-size: 1.1rem;
+  color: #15803d;
+  margin-bottom: 8px;
+}
+
+.step-content p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step {
+    max-width: none;
+  }
+}
+
+
+
 .weight {
   color: #64748b;
   margin-bottom: 1rem;
@@ -822,7 +891,7 @@ body {
 /* 响应式设计 */
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   .hero-subtitle {

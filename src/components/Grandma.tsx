@@ -44,6 +44,13 @@ const Grandma: React.FC = () => {
                 <img src="/images/2.jpg"alt="丰收时刻" />
               </div>
             </div>
+
+            <div className="image-group right-aligned">
+              <div className="image-label">现摘现发</div>
+              <div className="image-placeholder main-image">
+                <img src="/images/11.jpg"alt="现摘现发" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

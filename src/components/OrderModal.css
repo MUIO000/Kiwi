@@ -1,0 +1,372 @@
+/* 弹窗遮罩层 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* 弹窗内容 */
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* 关闭按钮 */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f1f5f9;
+  color: #dc2626;
+}
+
+/* 确认步骤 */
+.confirm-step {
+  text-align: center;
+}
+
+.confirm-step h2 {
+  color: #15803d;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.confirm-question {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+}
+
+.form-reminder {
+  background: #f0fdf4;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-reminder p {
+  color: #15803d;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-reminder ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-reminder li {
+  color: #4a5568;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* 付款步骤 */
+.payment-step h2 {
+  color: #15803d;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* 计算器部分 */
+.calculator-section {
+  margin-bottom: 30px;
+}
+
+.calculator-section h3 {
+  color: #15803d;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calculator {
+  background: #f8fdf5;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+}
+
+.calc-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.calc-item:last-child {
+  border-bottom: none;
+}
+
+.product-name {
+  font-weight: 600;
+  color: #374151;
+}
+
+.product-price {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.quantity-control button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.quantity-control button:hover:not(:disabled) {
+  background: #84cc16;
+  color: white;
+  border-color: #84cc16;
+}
+
+.quantity-control button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.subtotal {
+  font-weight: 600;
+  color: #84cc16;
+}
+
+.total-amount {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #84cc16;
+}
+
+.total-amount strong {
+  color: #15803d;
+  font-size: 1.3rem;
+}
+
+/* 付款部分 */
+.payment-section {
+  margin-bottom: 30px;
+}
+
+.qr-code-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  background: #f8fdf5;
+  border: 2px dashed #84cc16;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #64748b;
+}
+
+.qr-placeholder span {
+  font-weight: 600;
+  color: #15803d;
+  margin-bottom: 8px;
+}
+
+.qr-placeholder p {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.payment-instructions h4 {
+  color: #15803d;
+  margin-bottom: 15px;
+}
+
+.instruction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.instruction-label {
+  color: #4a5568;
+}
+
+.amount-highlight {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.note-highlight {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.payment-note {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* 按钮样式 */
+.confirm-buttons,
+.payment-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-success {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #84cc16;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #65a30d;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.btn-success {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .calc-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .confirm-buttons,
+  .payment-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-success {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    padding: 15px;
+  }
+  
+  .qr-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+} 

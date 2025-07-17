@@ -56,14 +56,14 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
       
-      <motion.div 
+      {/* <motion.div 
         className="scroll-hint"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >
         <FaChevronDown size={20} />
         <span>向下滑动探索更多</span>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
